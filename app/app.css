@@ -1,6 +1,11 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @font-face {
-    font-family: 'Handwritten';
-    src: url('assets/fonts/sharkhandwriteabc.ttf') format('truetype');
+  font-family: "Handwritten";
+  src: url("assets/fonts/sharkhandwriteabc.ttf") format("truetype");
+}
+
+body {
+  @apply bg-white;
+  letter-spacing: 1px;
 }

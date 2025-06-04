@@ -6,13 +6,15 @@ import Experiences from "./routes/experiences";
 
 export default function App() {
   return (
-    <div className="bg-gray-100 m-4 w-full h-full font-['Handwritten']">
+    <div className="font-['Handwritten'] text-center">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/experiences" element={<Experiences />} />
-      </Routes>
+      <div className="pt-16">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/experiences" element={<Experiences />} />
+        </Routes>
+      </div>
     </div>
   );
 }
