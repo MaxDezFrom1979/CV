@@ -10,20 +10,39 @@ export const experiences: Experience[] = [
   /* {
     title: "Développeur contractuel",
     location: "Montréal (Canada)",
-    company: "ALIVEcode",
-    date: "Été 2025",
-    datePrefix: "à l'",
+    company: {
+      value: "ALIVEcode",
+    },
+    date: {
+      prefix: "à l'",
+      value: "Été 2025",
+    },
     imageUrl: "https://placehold.co/400x300",
     description: `EN COURS!!!`,
   }, */
   {
     title: "Stagiaire en développement full stack",
     location: "Montréal (Canada)",
-    company: "Laboratoire de recherche informatique Maisonneuve",
-    companyPrefix: "le ",
+    company: {
+      prefix: "le ",
+      value: "Laboratoire de recherche informatique Maisonneuve",
+    },
     project: "ALIVEcode",
-    date: "2024 à 2025",
-    datePrefix: "de ",
+    date: {
+      prefix: "de ",
+      value: "2024 à 2025",
+    },
+    technologies: [
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Angular",
+      "Bootstrap",
+      "PostgreSQL",
+      "OpenAI API",
+      "Python",
+    ],
+    link: "https://alivecode.ca",
     imageUrl: aliveCode1Img,
     description: `Pendant que je faisais mon certificat en développement logiciel, j'ai eu l'opportunité de travailler sur ALIVEcode grâce au laboratoire.
       C'est une plateforme d'apprentissage active utilisée dans plusieurs cégeps et universités.
@@ -39,25 +58,50 @@ export const experiences: Experience[] = [
   {
     title: "Mission en Tunisie",
     location: "Sidi Bouzid (Tunisie)",
-    company: "Laboratoire de recherche informatique Maisonneuve",
-    companyPrefix: "le ",
+    company: {
+      prefix: "le ",
+      value: "Laboratoire de recherche informatique Maisonneuve",
+    },
     project: "ALIVEculture",
-    date: "Janvier 2025",
-    datePrefix: "en ",
+    date: {
+      prefix: "en ",
+      value: "Janvier 2025",
+    },
+    technologies: ["Python", "Arduino", "Raspberry Pi", "aliot-py", "IA"],
+    link: "https://aliveculture.ca",
     imageUrl: tunisieImg,
     description: `Pendant que je faisais mon certificat en développement logiciel, on m'a offert de partir en mission en Tunisie pour ALIVEculture, ce que j'avais fait l'été.
     Ça m'a pris par suprise, puisque je n'avais jamais quitté le Canada auparavant. Mais j'ai accepté avec plaisir.
     J'ai passé 10 jours à Sidi Bouzid, une ville au centre de la Tunisie, où j'ai travaillé avec une équipe de l'université ISET sur le projet.
-    On a déployé une serre intelligente juste à côté de l'université et on a formé les étudiants sur la création d'un capteur.`,
+    On a déployé une serre intelligente juste à côté de l'université et on a formé les étudiants sur la création d'un capteur.
+    On a aussi travailler sur la détection des maladies des plantes avec l'IA.`,
   },
   {
     title: "Stagiaire en développement full stack",
     location: "Montréal (Canada)",
-    company: "Laboratoire de recherche informatique Maisonneuve",
-    companyPrefix: "le ",
+    company: {
+      prefix: "le ",
+      value: "Laboratoire de recherche informatique Maisonneuve",
+    },
     project: "ALIVEculture",
-    date: "Été 2024",
-    datePrefix: "à l'",
+    date: {
+      prefix: "à l'",
+      value: "Été 2024",
+    },
+    technologies: [
+      "TypeScript",
+      "React",
+      "p5.js",
+      "Tailwind CSS",
+      "Angular",
+      "Bootstrap",
+      "PostgreSQL",
+      "Python",
+      "Arduino",
+      "Raspberry Pi",
+      "aliot-py",
+    ],
+    link: "https://aliveculture.ca",
     imageUrl: aliveCultureImg,
     description: `Juste après avoir terminé ma technique en développement d'applications Web et Mobiles, j'ai eu un stage sur ALIVEculture grâce au laboratoire.
     C'est une plateforme de serre intelligente qui permet de contrôler les paramètres d'une serre à distance.
@@ -75,16 +119,26 @@ export const experiences: Experience[] = [
       Si tu places un mur à côté d'un autre mur en diagonal, le coin va se connecter.
       Si tu places un capteur sur une plante, il va se mettre dans la terre de la tuile.
 
-    Créer cette simulation était les meilleurs moments du stage.`,
+    Créer cette simulation était un des meilleurs moments du stage.`,
   },
   {
     title: "Développeur contractuel",
     location: "Montréal (Canada)",
-    company: "Fondation canadienne pour la santé vasculaire",
-    companyPrefix: "la ",
+    company: {
+      prefix: "la ",
+      value: "Fondation canadienne pour la santé vasculaire",
+    },
     project: "OPTI+MEDIX sondage",
-    date: "Printemps 2024",
-    datePrefix: "au ",
+    date: {
+      prefix: "au ",
+      value: "Printemps 2024",
+    },
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Firebase",
+    ],
+    link: "https://play.google.com/store/apps/details?id=org.fcsv.optimedix.sondage&hl=fr_CA",
     imageUrl: fcsvImg,
     description: `Pour mon stage de fin de technique, j'ai eu un stage pour la fondation canadienne pour la santé vasculaire grâce au laboratoire.
     Dans ce stage, j'ai créer une application mobile et web de sondage avec la méthode DELPHI, qui est sur plusieurs itérations, pour des professionnels de la santé.
@@ -96,10 +150,14 @@ export const experiences: Experience[] = [
   {
     title: "Agent de bureau",
     location: "Montréal (Canada)",
-    company: "Tribunal administratif du logement",
-    companyPrefix: "le ",
-    date: "Été 2023",
-    datePrefix: "à l'",
+    company: {
+      prefix: "le ",
+      value: "Tribunal administratif du logement",
+    },
+    date: {
+      prefix: "à l'",
+      value: "Été 2023",
+    },
     imageUrl: bureauImg,
     description: `Je me cherchais un emploi d'été et je suis tombé sur une job de bureau sur Emploi Québec.
     Je me suis fait engager et j'ai travaillé comme agent de bureau à scanner et étamper des pièces d'évidence de 8h30 à 16h30.
@@ -110,10 +168,14 @@ export const experiences: Experience[] = [
   {
     title: "Brigadier à la propreté",
     location: "Montréal (Canada)",
-    company: "Arrondissement Rivière-des-Prairies Pointe-aux-Trembles",
-    companyPrefix: "l''",
-    date: "Étés 2021 et 2022",
-    datePrefix: "aux ",
+    company: {
+      prefix: "l'",
+      value: "Arrondissement Rivière-des-Prairies Pointe-aux-Trembles",
+    },
+    date: {
+      prefix: "aux ",
+      value: "Étés 2021 et 2022",
+    },
     imageUrl: brigadierImg,
     description: `Je me cherchais mon premier emploi d'été sur le site de la ville de Montréal.
     J'ai trouvé une job où je ramasse des déchets dans les rues de RDPAT de 6h30 à 15h30.

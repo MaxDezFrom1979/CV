@@ -13,10 +13,11 @@ export default function ExperienceCard({
     >
       <div className="flex gap-2 justify-between items-center">
         <h2 className="text-xl font-bold">{exp.title}</h2>
-        <p className="">{exp.date}</p>
+        <p className="">{exp.date?.value}</p>
       </div>
-      <div className="flex gap-2 justify-between items-center">
-        <p className="text-lg text-gray-700">{exp.company}</p>
+      <div className="flex gap-2 justify-between items-center tracking-normal">
+        <p className="text-lg text-gray-700">{exp.company?.value}</p>
+        <p className="text-lg text-gray-700">{exp.project}</p>
       </div>
 
       <img src={exp.imageUrl} alt="" />
