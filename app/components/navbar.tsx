@@ -30,7 +30,7 @@ export default function Navbar() {
             title="Mon CV"
             onClick={() => {
               window.open(
-                "/app/assets/CV_Maximilien_Desilets_2025.pdf",
+                "/CV_Maximilien_Desilets_2025.pdf",
                 "_blank"
               );
             }}
