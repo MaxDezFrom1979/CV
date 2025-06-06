@@ -5,7 +5,11 @@ export default function ContactLink({ link, title, icon }: LinkProps) {
   return (
     <div className="flex gap-2 items-center">
       {icon && <img className="w-6" src={icon} alt={title} />}
-      {link && <Link to={link}>{title}</Link>}
+      {link && (
+        <Link target="_blank" to={link}>
+          {title}
+        </Link>
+      )}
     </div>
   );
 }

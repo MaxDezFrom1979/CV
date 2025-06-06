@@ -10,6 +10,16 @@ import tailwindCssImg from "~/assets/images/competences/tailwindcss.png";
 import bulmaImg from "~/assets/images/competences/bulma.png";
 import pythonImg from "~/assets/images/competences/python.png";
 import arduinoImg from "~/assets/images/competences/arduino.png";
+import javaImg from "~/assets/images/competences/java.png";
+import kotlinImg from "~/assets/images/competences/kotlin.png";
+import dartImg from "~/assets/images/competences/dart.png";
+import flutterImg from "~/assets/images/competences/flutter.png";
+import firebaseImg from "~/assets/images/competences/firebase.png";
+import postgressqlImg from "~/assets/images/competences/postgresql.png";
+import mssqlImg from "~/assets/images/competences/mssql.png";
+import mysqlImg from "~/assets/images/competences/mysql.png";
+import francaisImg from "~/assets/images/competences/quebec.png";
+import anglaisImg from "~/assets/images/competences/canada.png";
 
 export const competences = [
   {
@@ -59,5 +69,45 @@ export const competences = [
   {
     title: "Arduino",
     imageUrl: arduinoImg,
+  },
+  {
+    title: "Java",
+    imageUrl: javaImg,
+  },
+  {
+    title: "Kotlin",
+    imageUrl: kotlinImg,
+  },
+  {
+    title: "Dart",
+    imageUrl: dartImg,
+  },
+  {
+    title: "Flutter",
+    imageUrl: flutterImg,
+  },
+  {
+    title: "Firebase",
+    imageUrl: firebaseImg,
+  },
+  {
+    title: "PostgreSQL",
+    imageUrl: postgressqlImg,
+  },
+  {
+    title: "MSSQL",
+    imageUrl: mssqlImg,
+  },
+  {
+    title: "MySQL",
+    imageUrl: mysqlImg,
+  },
+  {
+    title: "Français",
+    imageUrl: francaisImg,
+  },
+  {
+    title: "Anglais",
+    imageUrl: anglaisImg,
   },
 ];

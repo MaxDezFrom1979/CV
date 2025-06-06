@@ -1,4 +1,5 @@
 import { competences } from "~/data/competences";
+import { classNames } from "~/utils";
 
 export default function Home() {
   return (
@@ -13,7 +14,15 @@ export default function Home() {
       <div className="grid grid-cols-4">
         {competences.map((competence, index) => {
           return (
-            <div className="flex flex-col" key={index}>
+            <div
+              className={classNames(
+                "flex flex-col",
+                (competence == competences[competences.length - 1] ||
+                  competence == competences[competences.length - 2]) &&
+                  "col-span-2"
+              )}
+              key={index}
+            >
               <h4 className="text-lg font-bold">{competence.title}</h4>
               <img src={competence.imageUrl} alt={competence.title} />
             </div>

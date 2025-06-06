@@ -5,7 +5,6 @@ import type { Experience } from "~/types";
 import { classNames } from "~/utils";
 import leftArrowImg from "~/assets/images/arrowleft.png";
 import ExperienceDetails from "~/components/experience-details";
-import dance1Gif from "~/assets/gifs/dance1.gif";
 
 export default function Benevolat() {
   const [selected, setSelected] = useState<boolean>(false);
@@ -23,10 +22,16 @@ export default function Benevolat() {
         )}
       >
         <h1 className="text-3xl font-bold mb-4">Mon bénévolat</h1>
-        <div className="grid grid-cols-3 place-items-center">
+        <div className="flex justify-evenly gap-2">
           {benevolat.map((exp, idx) => {
             return (
-              <>
+              <div
+                className={classNames(
+                  "flex flex-col justify-end h-[80vh]",
+                  idx === 1 && "justify-start"
+                )}
+                key={idx}
+              >
                 <ExperienceCard
                   onClick={() => {
                     setSelected(true);
@@ -35,16 +40,11 @@ export default function Benevolat() {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                   className={classNames(
-                    "cursor-pointer mb-4 transition duration-500 hover:scale-105",
-                    idx === 2 ? "col-span-3" : ""
+                    "cursor-pointer mb-4 transition duration-500 hover:scale-105"
                   )}
-                  key={idx}
                   experience={exp}
                 />
-                {idx === 0 && (
-                  <img className="w-[200px]" src={dance1Gif} alt="Dance" />
-                )}
-              </>
+              </div>
             );
           })}
         </div>

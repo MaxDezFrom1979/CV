@@ -25,6 +25,16 @@ export default function Navbar() {
             }}
             title="Me rejoindre"
           />
+          <NavbarLink
+            className="cursor-pointer w-30"
+            title="Mon CV"
+            onClick={() => {
+              window.open(
+                "/app/assets/CV_Maximilien_Desilets_2025.pdf",
+                "_blank"
+              );
+            }}
+          />
         </div>
       </div>
 

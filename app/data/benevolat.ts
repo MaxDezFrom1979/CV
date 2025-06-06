@@ -8,7 +8,8 @@ export const benevolat: Experience[] = [
     title: "Bénévole",
     location: "Montréal (Canada)",
     company: {
-      value: "Code MTL",
+      value: "Fondation pour les élèves de Montréal",
+      prefix: "la ",
     },
     date: {
       prefix: "à l'",
@@ -24,7 +25,7 @@ export const benevolat: Experience[] = [
     location: "Montréal (Canada)",
     company: {
       prefix: "l'",
-      value: "AFPAD",
+      value: "Association des familles de personnes assasinées ou disparues",
     },
     date: {
       prefix: "de ",
