@@ -52,3 +52,8 @@ export type LinkProps = {
   link?: string;
   icon?: string;
 };
+
+export type CompetencesCardProps = {
+  title: string;
+  competences: Competence[];
+};

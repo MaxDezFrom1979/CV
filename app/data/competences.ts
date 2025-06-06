@@ -20,8 +20,27 @@ import mssqlImg from "~/assets/images/competences/mssql.png";
 import mysqlImg from "~/assets/images/competences/mysql.png";
 import francaisImg from "~/assets/images/competences/quebec.png";
 import anglaisImg from "~/assets/images/competences/canada.png";
+import raspImg from "~/assets/images/competences/rasp.png";
+import reactNativeImg from "~/assets/images/competences/reactnative.png";
+import riscvImg from "~/assets/images/competences/riscv.png";
+import htmlImg from "~/assets/images/competences/html.png";
 
-export const competences = [
+export const langues = [
+  {
+    title: "Français",
+    imageUrl: francaisImg,
+  },
+  {
+    title: "Anglais",
+    imageUrl: anglaisImg,
+  },
+];
+
+export const langages = [
+  {
+    title: "HTML5",
+    imageUrl: htmlImg,
+  },
   {
     title: "JavaScript",
     imageUrl: jsImg,
@@ -30,6 +49,25 @@ export const competences = [
     title: "TypeScript",
     imageUrl: tsImg,
   },
+  {
+    title: "Java",
+    imageUrl: javaImg,
+  },
+  {
+    title: "Python",
+    imageUrl: pythonImg,
+  },
+  {
+    title: "Dart",
+    imageUrl: dartImg,
+  },
+  {
+    title: "RISC-V",
+    imageUrl: riscvImg,
+  },
+];
+
+export const technologiesWeb = [
   {
     title: "Node.js",
     imageUrl: nodeJsImg,
@@ -51,10 +89,6 @@ export const competences = [
     imageUrl: vueJsImg,
   },
   {
-    title: "OpenAI",
-    imageUrl: openAiImg,
-  },
-  {
     title: "Tailwind CSS",
     imageUrl: tailwindCssImg,
   },
@@ -62,30 +96,24 @@ export const competences = [
     title: "Bulma",
     imageUrl: bulmaImg,
   },
+];
+
+export const technologiesMobile = [
   {
-    title: "Python",
-    imageUrl: pythonImg,
-  },
-  {
-    title: "Arduino",
-    imageUrl: arduinoImg,
-  },
-  {
-    title: "Java",
-    imageUrl: javaImg,
+    title: "Flutter",
+    imageUrl: flutterImg,
   },
   {
     title: "Kotlin",
     imageUrl: kotlinImg,
   },
   {
-    title: "Dart",
-    imageUrl: dartImg,
+    title: "React Native",
+    imageUrl: reactNativeImg,
   },
-  {
-    title: "Flutter",
-    imageUrl: flutterImg,
-  },
+];
+
+export const basesDeDonnees = [
   {
     title: "Firebase",
     imageUrl: firebaseImg,
@@ -102,12 +130,19 @@ export const competences = [
     title: "MySQL",
     imageUrl: mysqlImg,
   },
+];
+
+export const aiIot = [
   {
-    title: "Français",
-    imageUrl: francaisImg,
+    title: "OpenAI",
+    imageUrl: openAiImg,
   },
   {
-    title: "Anglais",
-    imageUrl: anglaisImg,
+    title: "Arduino",
+    imageUrl: arduinoImg,
+  },
+  {
+    title: "Raspberry Pi",
+    imageUrl: raspImg,
   },
 ];
