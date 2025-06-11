@@ -22,13 +22,13 @@ export default function Benevolat() {
         )}
       >
         <h1 className="text-3xl font-bold mb-4">Mon bénévolat</h1>
-        <div className="flex justify-evenly gap-2">
+        <div className="flex flex-col xl:flex-row items-center justify-evenly gap-2">
           {benevolat.map((exp, idx) => {
             return (
               <div
                 className={classNames(
-                  "flex flex-col justify-end h-[80vh]",
-                  idx === 1 && "justify-start"
+                  "flex flex-col justify-end xl:h-[80vh]",
+                  idx === 1 && "xl:justify-start"
                 )}
                 key={idx}
               >

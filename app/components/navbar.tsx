@@ -1,44 +1,71 @@
 import { useState } from "react";
 import Contact from "~/components/contact";
 import NavbarLink from "./navbar-link";
+import menuImg from "~/assets/images/icons/menu.png";
+import closeImg from "~/assets/images/icons/close.png";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(screen.width >= 768);
+  const [openContact, setOpenContact] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 start-0 w-full text-xl z-50">
-      <div className="flex items-center justify-between">
-        <div className="text-2xl">
-          <NavbarLink className="w-30" title="Maximilien D." link="/" />
-        </div>
-        <div className="flex justify-evenly items-center">
-          <NavbarLink
-            className="w-30"
-            title="Expériences"
-            link="/experiences"
-          />
-          <NavbarLink className="w-30" title="Bénévolat" link="/benevolat" />
-          <NavbarLink
-            className="cursor-pointer w-30"
-            onClick={() => {
-              setOpen(true);
-            }}
-            title="Me rejoindre"
-          />
-          <NavbarLink
-            className="cursor-pointer w-30"
-            title="Mon CV"
-            onClick={() => {
-              window.open(
-                "/CV_Maximilien_Desilets_2025.pdf",
-                "_blank"
-              );
-            }}
-          />
-        </div>
-      </div>
+    <nav className="bg-white shadow-md fixed top-0 start-0 w-full text-xl z-50 transition-all duration-500 ease-in-out">
+      {!open ? (
+        <img
+          className="md:hidden absolute left-4 top-4"
+          src={menuImg}
+          onClick={() => setOpen(true)}
+        />
+      ) : (
+        <img
+          className="md:hidden absolute left-4 top-4"
+          src={closeImg}
+          onClick={() => setOpen(false)}
+        />
+      )}
 
-      {open && <Contact close={() => setOpen(false)} />}
+      {(screen.width >= 768 || open) && (
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="text-2xl">
+            <NavbarLink
+              className="w-30"
+              title="Maximilien D."
+              link="/"
+              onClick={() => setOpen(false)}
+            />
+          </div>
+          <div className="flex flex-col md:flex-row justify-evenly items-center">
+            <NavbarLink
+              className="w-30"
+              title="Expériences"
+              link="/experiences"
+              onClick={() => setOpen(false)}
+            />
+            <NavbarLink
+              className="w-30"
+              title="Bénévolat"
+              link="/benevolat"
+              onClick={() => setOpen(false)}
+            />
+            <NavbarLink
+              className="cursor-pointer w-30"
+              onClick={() => {
+                setOpenContact(true);
+              }}
+              title="Me rejoindre"
+            />
+            <NavbarLink
+              className="cursor-pointer w-30"
+              title="Mon CV"
+              onClick={() => {
+                window.open("/CV_Maximilien_Desilets_2025.pdf", "_blank");
+              }}
+            />
+          </div>
+        </div>
+      )}
+
+      {openContact && <Contact close={() => setOpenContact(false)} />}
     </nav>
   );
 }

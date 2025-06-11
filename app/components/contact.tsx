@@ -34,7 +34,7 @@ export default function Contact({
             </button>
             <div className="flex">
               <img
-                className="w-[200px] -scale-x-100"
+                className="w-[200px] -scale-x-100 hidden lg:block"
                 src={dance1Gif}
                 alt="Dance"
               />
@@ -66,7 +66,11 @@ export default function Contact({
                   </span>
                 )}
               </div>
-              <img className="w-[200px]" src={dance1Gif} alt="Dance" />
+              <img
+                className="w-[200px] hidden xl:block"
+                src={dance1Gif}
+                alt="Dance"
+              />
             </div>
           </div>
         </div>
