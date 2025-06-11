@@ -1,4 +1,5 @@
 import CompetencesCard from "~/components/competences-card";
+import NavbarLink from "~/components/navbar-link";
 import {
   aiIot,
   basesDeDonnees,
@@ -27,6 +28,18 @@ export default function Home() {
         <CompetencesCard title="Mobile" competences={technologiesMobile} />
         <CompetencesCard title="Base de données" competences={basesDeDonnees} />
         <CompetencesCard title="AI/IoT" competences={aiIot} />
+      </div>
+      <span className="bg-black h-[1px] my-1 rounded-md w-[80%]" />
+      <div className="flex text-2xl py-8">
+        <NavbarLink className="w-30" title="Expériences" link="/experiences" />
+        <NavbarLink className="w-30" title="Bénévolat" link="/benevolat" />
+        <NavbarLink
+          className="cursor-pointer w-30"
+          title="Mon CV"
+          onClick={() => {
+            window.open("/CV_Maximilien_Desilets_2025.pdf", "_blank");
+          }}
+        />
       </div>
     </div>
   );

@@ -79,7 +79,7 @@ export default function Experiences() {
               }}
             >
               <img
-                className="rotate-300"
+                className="rotate-300 animate-pulse"
                 src={leftArrowImg}
                 alt="Go back img"
               />

@@ -6,8 +6,9 @@ export default function Arrow({ direction = "right", visible = true }: ArrowProp
   return (
     <div
       className={classNames(
-        "object-cover w-[400px]",
-        direction === "left" && "-scale-x-100",
+        "object-cover w-[400px] -scale-y-100",
+        direction === "left" && "-scale-x-100 rotate-90",
+        direction === "right" && "-rotate-90",
         visible ? "opacity-100" : "opacity-0"
       )}
     >

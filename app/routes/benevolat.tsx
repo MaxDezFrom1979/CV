@@ -71,7 +71,7 @@ export default function Benevolat() {
               }}
             >
               <img
-                className="rotate-120"
+                className="rotate-120 animate-pulse"
                 src={leftArrowImg}
                 alt="Go back img"
               />

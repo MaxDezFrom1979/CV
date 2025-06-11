@@ -6,10 +6,13 @@ import linkedInIcon from "~/assets/images/icons/linkedin.png";
 import emailIcon from "~/assets/images/icons/email.png";
 import githubIcon from "~/assets/images/icons/github.png";
 import dance1Gif from "~/assets/gifs/dance1.gif";
+import { useState } from "react";
 
 export default function Contact({
   close,
 }: ContactProps & React.HTMLAttributes<HTMLDivElement>) {
+  const [clicked, setClicked] = useState(false);
+
   return (
     <div className="relative z-100">
       <div
@@ -30,8 +33,12 @@ export default function Contact({
               X
             </button>
             <div className="flex">
-              <img className="w-[200px]" src={dance1Gif} alt="Dance" />
-              <div className="flex flex-col items-center underline mt-4">
+              <img
+                className="w-[200px] -scale-x-100"
+                src={dance1Gif}
+                alt="Dance"
+              />
+              <div className="flex flex-col items-center mt-4">
                 <ContactLink
                   link="https://www.linkedin.com/in/maximilien-désilets/"
                   title="LinkedIn"
@@ -44,10 +51,20 @@ export default function Contact({
                 />
                 <br />
                 <ContactLink
-                  link="mailto:maximilien.desilets@gmail.com"
                   title="Mon courriel"
                   icon={emailIcon}
+                  onClick={() => {
+                    navigator.clipboard.writeText(
+                      "maximilien.desilets@gmail.com"
+                    );
+                    setClicked(true);
+                  }}
                 />
+                {clicked && (
+                  <span className="no-underline">
+                    Courriel copié dans le presse-papiers !
+                  </span>
+                )}
               </div>
               <img className="w-[200px]" src={dance1Gif} alt="Dance" />
             </div>
