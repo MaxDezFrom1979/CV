@@ -15,12 +15,12 @@ export default function ExperienceCard({
         <h2 className="text-xl font-bold">{exp.title}</h2>
         <p className="">{exp.date?.value}</p>
       </div>
-      <div className="gap-2 justify-between items-center tracking-normal hidden md:flex">
+      <div className="flex gap-2 justify-between items-center tracking-normal">
         <p className="text-lg text-gray-700">{exp.company?.value}</p>
-        <p className="text-lg text-gray-700">{exp.project}</p>
+        <p className="text-lg text-gray-700 hidden md:block">{exp.project}</p>
       </div>
 
-      <img src={exp.imageUrl} alt="" />
+      <img src={exp.imageUrl} alt={exp.title} />
     </div>
   );
 }

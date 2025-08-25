@@ -4,8 +4,9 @@ import Gallery from "./routes/gallery";
 import Navbar from "./components/navbar";
 import Home from "./routes/home";
 import Experiences from "./routes/experiences";
-import Benevolat from "./routes/benevolat";
-import PageTransition from "./components/page-transition";
+import { experiences } from "./data/experiences";
+import { benevolat } from "./data/benevolat";
+import { Footer } from "./components/footer";
 
 export default function App() {
   const location = useLocation();
@@ -14,51 +15,24 @@ export default function App() {
     <div className="font-['Handwritten'] text-center overflow-x-hidden h-screen w-screen">
       <Navbar />
       <div className="pt-16 transition-all">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route
-              path="/"
-              element={
-                <PageTransition>
-                  <Home />
-                </PageTransition>
-              }
-            />
-            <Route
-              path="/gallery"
-              element={
-                <PageTransition>
-                  <Gallery />
-                </PageTransition>
-              }
-            />
-            <Route
-              path="/experiences"
-              element={
-                <PageTransition>
-                  <Experiences />
-                </PageTransition>
-              }
-            />
-            <Route
-              path="/benevolat"
-              element={
-                <PageTransition>
-                  <Benevolat />
-                </PageTransition>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <PageTransition>
-                  <div className="text-2xl">Page not found</div>
-                </PageTransition>
-              }
-            />
-          </Routes>
-        </AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route
+            path="/experiences"
+            element={<Experiences experienceList={experiences} />}
+          />
+          <Route
+            path="/benevolat"
+            element={<Experiences benevolat experienceList={benevolat} />}
+          />
+          <Route
+            path="*"
+            element={<div className="text-2xl">Page not found</div>}
+          />
+        </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

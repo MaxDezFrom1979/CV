@@ -3,9 +3,10 @@ import Contact from "~/components/contact";
 import NavbarLink from "./navbar-link";
 import menuImg from "~/assets/images/icons/menu.png";
 import closeImg from "~/assets/images/icons/close.png";
+import { isMobile } from "~/utils";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(screen.width >= 768);
+  const [open, setOpen] = useState(!isMobile());
   const [openContact, setOpenContact] = useState(false);
 
   return (
@@ -24,7 +25,7 @@ export default function Navbar() {
         />
       )}
 
-      {(screen.width >= 768 || open) && (
+      {(!isMobile() || open) && (
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-2xl">
             <NavbarLink
@@ -35,18 +36,18 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col md:flex-row justify-evenly items-center">
-            <NavbarLink
-              className="w-30"
-              title="Expériences"
-              link="/experiences"
-              onClick={() => setOpen(false)}
-            />
-            <NavbarLink
-              className="w-30"
-              title="Bénévolat"
-              link="/benevolat"
-              onClick={() => setOpen(false)}
-            />
+            <NavbarLink className="w-30" title="Expériences" hideCircle>
+              <NavbarLink
+                title="Travail"
+                link="/experiences"
+                onClick={() => setOpen(false)}
+              />
+              <NavbarLink
+                title="Bénévolat"
+                link="/benevolat"
+                onClick={() => setOpen(false)}
+              />
+            </NavbarLink>
             <NavbarLink
               className="cursor-pointer w-30"
               onClick={() => {

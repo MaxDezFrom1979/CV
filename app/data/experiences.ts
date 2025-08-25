@@ -5,9 +5,10 @@ import fcsvImg from "app/assets/images/experiences/fcsv.png";
 import aliveCultureImg from "app/assets/images/experiences/aliveculture.png";
 import tunisieImg from "app/assets/images/experiences/tunisie.png";
 import aliveCode1Img from "app/assets/images/experiences/alivecode1.png";
+import { Competences, CompetencesALIVE } from "~/types";
 
 export const experiences: Experience[] = [
-  /* {
+  {
     title: "Développeur contractuel",
     location: "Montréal (Canada)",
     company: {
@@ -17,9 +18,11 @@ export const experiences: Experience[] = [
       prefix: "à l'",
       value: "Été 2025",
     },
+    technologies: [...CompetencesALIVE],
     imageUrl: "https://placehold.co/400x300",
     description: `EN COURS!!!`,
-  }, */
+    link: "https://alivecode.ca",
+  },
   {
     title: "Stagiaire en développement full stack",
     location: "Montréal (Canada)",
@@ -32,16 +35,7 @@ export const experiences: Experience[] = [
       prefix: "de ",
       value: "2024 à 2025",
     },
-    technologies: [
-      "TypeScript",
-      "React",
-      "Tailwind CSS",
-      "Angular",
-      "Bootstrap",
-      "PostgreSQL",
-      "OpenAI API",
-      "Python",
-    ],
+    technologies: [...CompetencesALIVE, Competences.OpenAI, Competences.Python],
     link: "https://alivecode.ca",
     imageUrl: aliveCode1Img,
     description: `Pendant que je faisais mon certificat en développement logiciel, j'ai eu l'opportunité de travailler sur ALIVEcode grâce au laboratoire.
@@ -67,7 +61,12 @@ export const experiences: Experience[] = [
       prefix: "en ",
       value: "Janvier 2025",
     },
-    technologies: ["Python", "Arduino", "Raspberry Pi", "aliot-py", "IA"],
+    technologies: [
+      ...CompetencesALIVE,
+      Competences.Python,
+      Competences.Arduino,
+      Competences.RaspberryPi,
+    ],
     link: "https://aliveculture.ca",
     imageUrl: tunisieImg,
     description: `Pendant que je faisais mon certificat en développement logiciel, on m'a offert de partir en mission en Tunisie pour ALIVEculture, ce que j'avais fait l'été.
@@ -89,17 +88,11 @@ export const experiences: Experience[] = [
       value: "Été 2024",
     },
     technologies: [
-      "TypeScript",
-      "React",
-      "p5.js",
-      "Tailwind CSS",
-      "Angular",
-      "Bootstrap",
-      "PostgreSQL",
-      "Python",
-      "Arduino",
-      "Raspberry Pi",
-      "aliot-py",
+      Competences.JavaScript,
+      ...CompetencesALIVE,
+      Competences.Python,
+      Competences.Arduino,
+      Competences.RaspberryPi,
     ],
     link: "https://aliveculture.ca",
     imageUrl: aliveCultureImg,
@@ -133,11 +126,7 @@ export const experiences: Experience[] = [
       prefix: "au ",
       value: "Printemps 2024",
     },
-    technologies: [
-      "Flutter",
-      "Dart",
-      "Firebase",
-    ],
+    technologies: [Competences.Flutter, Competences.Dart, Competences.Firebase],
     link: "https://play.google.com/store/apps/details?id=org.fcsv.optimedix.sondage&hl=fr_CA",
     imageUrl: fcsvImg,
     description: `Pour mon stage de fin de technique, j'ai eu un stage pour la fondation canadienne pour la santé vasculaire grâce au laboratoire.

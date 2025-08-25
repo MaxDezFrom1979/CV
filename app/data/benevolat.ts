@@ -17,7 +17,7 @@ export const benevolat: Experience[] = [
     },
     link: "https://codemtl.org",
     imageUrl: codemtlImg,
-    description: `J'ai eu l'opportunité de représenter Code MTL lors du festival Eureka 2025.
+    description: `J'ai eu l'opportunité d'aider Code MTL lors du festival Eureka 2025.
     J'ai montré à des jeunes de 6-12 ans le logiciel Scratch et les ai incités à aimer la programmation.`,
   },
   {

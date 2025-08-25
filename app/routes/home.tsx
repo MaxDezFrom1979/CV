@@ -1,13 +1,7 @@
 import CompetencesCard from "~/components/competences-card";
 import NavbarLink from "~/components/navbar-link";
-import {
-  aiIot,
-  basesDeDonnees,
-  langages,
-  langues,
-  technologiesMobile,
-  technologiesWeb,
-} from "~/data/competences";
+import { CompetenceType } from "~/types";
+import { getCompetencesByType } from "~/utils";
 
 export default function Home() {
   return (
@@ -19,26 +13,32 @@ export default function Home() {
         Je suis un développeur full stack qui est situé à Montréal.
       </p>
       <div>
-        <CompetencesCard title="Langues parlées" competences={langues} />
-        <CompetencesCard title="Langages écrits" competences={langages} />
+        <CompetencesCard
+          title="Langues parlées"
+          competences={getCompetencesByType(CompetenceType.Langue)}
+        />
+        <CompetencesCard
+          title="Langages écrits"
+          competences={getCompetencesByType(CompetenceType.Langage)}
+        />
       </div>
       <div className="py-8">
         <h2 className="text-3xl font-bold">Technologies apprises</h2>
-        <CompetencesCard title="Web" competences={technologiesWeb} />
-        <CompetencesCard title="Mobile" competences={technologiesMobile} />
-        <CompetencesCard title="Base de données" competences={basesDeDonnees} />
-        <CompetencesCard title="AI/IoT" competences={aiIot} />
-      </div>
-      <span className="bg-black h-[1px] my-1 rounded-md w-[80%]" />
-      <div className="flex text-2xl py-8">
-        <NavbarLink className="w-30" title="Expériences" link="/experiences" />
-        <NavbarLink className="w-30" title="Bénévolat" link="/benevolat" />
-        <NavbarLink
-          className="cursor-pointer w-30"
-          title="Mon CV"
-          onClick={() => {
-            window.open("/CV_Maximilien_Desilets_2025.pdf", "_blank");
-          }}
+        <CompetencesCard
+          title="Web"
+          competences={getCompetencesByType(CompetenceType.Web)}
+        />
+        <CompetencesCard
+          title="Mobile"
+          competences={getCompetencesByType(CompetenceType.Mobile)}
+        />
+        <CompetencesCard
+          title="Base de données"
+          competences={getCompetencesByType(CompetenceType.Bd)}
+        />
+        <CompetencesCard
+          title="AI/IoT"
+          competences={getCompetencesByType(CompetenceType.AiIot)}
         />
       </div>
     </div>

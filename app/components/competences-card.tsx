@@ -13,7 +13,11 @@ export default function CompetencesCard({
           return (
             <div className="flex flex-col" key={index}>
               <h4 className="text-lg font-bold">{competence.title}</h4>
-              <img src={competence.imageUrl} alt={competence.title} />
+              <img
+                className=" h-32 w-32"
+                src={competence.imageUrl}
+                alt={competence.title}
+              />
             </div>
           );
         })}

@@ -6,9 +6,11 @@ import { classNames } from "~/utils";
 export default function NavbarLink({
   link,
   title,
+  hideCircle,
   onClick,
   className,
-}: LinkProps & React.HTMLAttributes<HTMLDivElement>) {
+  children,
+}: LinkProps) {
   const location = useLocation();
 
   const getClass = (path: string) => {
@@ -17,20 +19,34 @@ export default function NavbarLink({
 
   return (
     <div
-      className={classNames("relative group p-2", className)}
+      className={classNames(
+        "relative group/dropdown p-2",
+        link && "group",
+        className
+      )}
       onClick={onClick}
     >
-      <img
-        src={circleImg}
-        alt="Cercle"
-        className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
-      />
+      {!hideCircle && (
+        <img
+          src={circleImg}
+          alt="Cercle"
+          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+        />
+      )}
       {link ? (
-        <Link className={getClass(link)} to={link}>
+        <Link
+          className={classNames(children && "hidden md:block", getClass(link))}
+          to={link}
+        >
           {title}
         </Link>
       ) : (
-        <span>{title}</span>
+        <span className={classNames(children && "hidden md:block")}>{title}</span>
+      )}
+      {children && (
+        <div className="md:hidden group-hover/dropdown:flex flex-col md:absolute top-0 bg-white w-full border rounded-lg p-1">
+          {children}
+        </div>
       )}
     </div>
   );
