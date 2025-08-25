@@ -1,6 +1,8 @@
 export type Experience = {
+  id: string;
   title: string;
   description?: string;
+  learned?: string;
   date?: {
     prefix?: string;
     value: string;
@@ -78,11 +80,12 @@ export enum Competences {
   Python = "Python",
   Dart = "Dart",
   RISC_V = "RISC-V",
-  NodeJs = "Node.js",
-  ExpressJs = "Expressjs",
   React = "React",
   Angular = "Angular",
   VueJs = "Vue.js",
+  NodeJs = "Node.js",
+  ExpressJs = "Expressjs",
+  P5js = "p5.js",
   TailwindCSS = "Tailwind CSS",
   Bulma = "Bulma",
   Flutter = "Flutter",

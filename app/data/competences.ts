@@ -24,6 +24,7 @@ import raspImg from "~/assets/images/competences/rasp.png";
 import reactNativeImg from "~/assets/images/competences/reactnative.png";
 import riscvImg from "~/assets/images/competences/riscv.png";
 import htmlImg from "~/assets/images/competences/html.png";
+import p5JsImg from "~/assets/images/competences/p5js.png";
 import { Competences, CompetenceType, type Competence } from "~/types";
 
 export const competencesMap: Record<Competences, Competence> = {
@@ -62,16 +63,6 @@ export const competencesMap: Record<Competences, Competence> = {
     imageUrl: riscvImg,
     type: CompetenceType.Langage,
   },
-  [Competences.NodeJs]: {
-    title: "Node.js",
-    imageUrl: nodeJsImg,
-    type: CompetenceType.Web,
-  },
-  [Competences.ExpressJs]: {
-    title: "Expressjs",
-    imageUrl: expressJsImg,
-    type: CompetenceType.Web,
-  },
   [Competences.React]: {
     title: "React",
     imageUrl: reactImg,
@@ -85,6 +76,21 @@ export const competencesMap: Record<Competences, Competence> = {
   [Competences.VueJs]: {
     title: "Vue.js",
     imageUrl: vueJsImg,
+    type: CompetenceType.Web,
+  },
+  [Competences.NodeJs]: {
+    title: "Node.js",
+    imageUrl: nodeJsImg,
+    type: CompetenceType.Web,
+  },
+  [Competences.ExpressJs]: {
+    title: "Expressjs",
+    imageUrl: expressJsImg,
+    type: CompetenceType.Web,
+  },
+  [Competences.P5js]: {
+    title: "p5.js",
+    imageUrl: p5JsImg,
     type: CompetenceType.Web,
   },
   [Competences.TailwindCSS]: {

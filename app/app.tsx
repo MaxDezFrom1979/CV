@@ -12,9 +12,9 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="font-['Handwritten'] text-center overflow-x-hidden h-screen w-screen">
+    <div className="font-['Handwritten'] text-center overflow-x-hidden flex flex-col min-h-screen">
       <Navbar />
-      <div className="pt-16 transition-all">
+      <div className="pt-16 flex-1">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />

@@ -21,13 +21,11 @@ export default function Experiences({
   useEffect(() => {
     const title = location.search.split("=")[1];
     if (!title) return;
-    const exp = experienceList.find(
-      (e) => encodeURIComponent(e.title) === title
-    );
+    const exp = experienceList.find((e) => encodeURIComponent(e.id) === title);
     if (!exp) return;
     setExpSelected(exp);
     setHideList(true);
-  }, []);
+  }, [location]);
 
   useEffect(() => {
     setLastExperience(experienceList[experienceList.length - 1]);
@@ -38,7 +36,7 @@ export default function Experiences({
     setExpSelected(exp);
     window.scrollTo({ top: 0, behavior: "smooth" });
     setHideList(true);
-    navigate(`/${benevolat ? "benevolat" : "experiences"}?exp=${exp.title}`);
+    navigate(`/${benevolat ? "benevolat" : "experiences"}?exp=${exp.id}`);
   }
 
   function onArrowClick() {

@@ -5,6 +5,7 @@ import codemtlImg from "~/assets/images/benevolat/codemtl.png";
 
 export const benevolat: Experience[] = [
   {
+    id: "benevolat-codemtl",
     title: "Bénévole",
     location: "Montréal (Canada)",
     company: {
@@ -21,6 +22,7 @@ export const benevolat: Experience[] = [
     J'ai montré à des jeunes de 6-12 ans le logiciel Scratch et les ai incités à aimer la programmation.`,
   },
   {
+    id: "benevolat-afpad",
     title: "Bénévole ponctuel",
     location: "Montréal (Canada)",
     company: {
@@ -39,6 +41,7 @@ export const benevolat: Experience[] = [
     J'ai aussi fait du montage vidéo pour Mardi je donne en Novembre 2020.`,
   },
   {
+    id: "benevolat-guepe",
     title: "Assistant naturaliste",
     location: "Montréal (Canada)",
     company: {

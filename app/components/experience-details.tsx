@@ -8,21 +8,15 @@ export default function ExperienceDetails({
   onArrowClick,
 }: ExperienceDetailsProps) {
   return (
-    <div className="flex flex-col md:flex-row text-xl justify-evenly w-full h-full">
+    <div className="flex flex-col md:flex-row text-xl justify-evenly w-full h-full relative">
+      <button
+        className="absolute -top-8 left-4 size-12 flex-none text-3xl cursor-pointer"
+        onClick={onArrowClick}
+      >
+        <img className="animate-pulse rotate-30" src={leftArrowImg} alt="Go back img" />
+      </button>
       <div className="flex flex-col items-center flex-1 md:border-r">
-        <div className="flex flex-row items-end">
-          <button
-            className="size-12 flex-none text-3xl cursor-pointer"
-            onClick={onArrowClick}
-          >
-            <img
-              className="animate-pulse"
-              src={leftArrowImg}
-              alt="Go back img"
-            />
-          </button>
-          <h2 className="flex-1 text-3xl font-bold">{exp.title}</h2>
-        </div>
+        <h2 className="flex-1 text-3xl font-bold">{exp.title}</h2>
         <p className="text-gray-700">
           J'ai travaillé pour {exp.company?.prefix}
           {exp.company?.value} {exp.date?.prefix}
@@ -42,7 +36,7 @@ export default function ExperienceDetails({
           </>
         )}
       </div>
-      <div className="flex flex-col flex-2 relative">
+      <div className="flex flex-col flex-2 relative p-2 text-start">
         {exp.imageUrl && (
           <img
             src={exp.imageUrl}
@@ -58,8 +52,11 @@ export default function ExperienceDetails({
                 <span className="bg-black h-[1px] my-4 rounded-md w-[60%]" />
               )}
               <h3 className="text-2xl font-bold">Description</h3>
-              <p className="item-body text-gray-700 whitespace-break-spaces">
+              <p className="text-gray-700 whitespace-break-spaces">
                 {exp.description}
+              </p>
+              <p className="mt-2 text-gray-700 font-bold whitespace-break-spaces">
+                {exp.learned}
               </p>
             </>
           )}
