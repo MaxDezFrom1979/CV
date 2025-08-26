@@ -1,5 +1,4 @@
 import CompetencesCard from "~/components/competences-card";
-import NavbarLink from "~/components/navbar-link";
 import { CompetenceType } from "~/types";
 import { getCompetencesByType } from "~/utils";
 
