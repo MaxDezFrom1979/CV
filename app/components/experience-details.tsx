@@ -10,7 +10,7 @@ export default function ExperienceDetails({
   return (
     <div className="flex flex-col md:flex-row text-xl justify-evenly w-full h-full relative">
       <button
-        className="absolute -top-8 left-4 size-12 flex-none text-3xl cursor-pointer"
+        className="absolute -top-4 left-4 size-12 flex-none text-3xl cursor-pointer"
         onClick={onArrowClick}
       >
         <img className="animate-pulse rotate-30" src={leftArrowImg} alt="Go back img" />

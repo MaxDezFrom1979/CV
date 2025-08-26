@@ -16,10 +16,11 @@ export const benevolat: Experience[] = [
       prefix: "à l'",
       value: "Été 2025",
     },
-    link: "https://codemtl.org",
+    link: "https://fondationelevesmtl.ca",
     imageUrl: codemtlImg,
     description: `J'ai eu l'opportunité d'aider Code MTL lors du festival Eureka 2025.
-    J'ai montré à des jeunes de 6-12 ans le logiciel Scratch et les ai incités à aimer la programmation.`,
+J'ai montré à des jeunes de 6-12 ans le logiciel Scratch et les ai incités à aimer la programmation.
+J'ai aussi essayé de convertir les adultes présents à la programmation.`,
   },
   {
     id: "benevolat-afpad",
@@ -36,9 +37,9 @@ export const benevolat: Experience[] = [
     link: "https://afpad.ca",
     imageUrl: afpadImg,
     description: `Ma mère travaillait pour l'AFPAD et j'ai eu la chance de l'accompagner pour aider à plusieurs tâches diverses.
-    J'ai fait de l'entrée de données, du déchiquetage et de l'archivage quand j'étais au bureau.
-    J'ai aidé dans quelques événements organisés.
-    J'ai aussi fait du montage vidéo pour Mardi je donne en Novembre 2020.`,
+J'ai fait de l'entrée de données, du déchiquetage et de l'archivage quand j'étais au bureau.
+J'ai aidé dans quelques événements organisés.
+J'ai aussi fait du montage vidéo pour Mardi je donne en Novembre 2020.`,
   },
   {
     id: "benevolat-guepe",
@@ -55,7 +56,7 @@ export const benevolat: Experience[] = [
     link: "https://www.guepe.qc.ca",
     imageUrl: guepeImg,
     description: `J'étais aller à ce camp quand j'étais jeune et j'ai eu la chance de revenir comme assistant naturaliste.
-      J'ai aidé les moniteurs à organiser des activités pour les enfants, à les surveiller et à leur enseigner la nature.
-      J'y suis retourné pendant 3 étés consécutifs.`,
+J'ai aidé les moniteurs à organiser des activités pour les enfants, à les surveiller et à leur enseigner la nature.
+J'y suis retourné pendant 3 étés consécutifs.`,
   },
 ];

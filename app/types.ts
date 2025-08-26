@@ -61,6 +61,7 @@ export type LinkProps = {
   link?: string;
   icon?: string;
   hideCircle?: boolean;
+  newTab?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export type CompetencesCardProps = {

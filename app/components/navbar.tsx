@@ -61,6 +61,7 @@ export default function Navbar() {
               onClick={() => {
                 window.open("/CV_Maximilien_Desilets_2025.pdf", "_blank");
               }}
+              newTab
             />
           </div>
         </div>
