@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 import Gallery from "./routes/gallery";
 import Navbar from "./components/navbar";
 import Home from "./routes/home";
@@ -28,6 +27,7 @@ export default function App() {
             element={<Experiences benevolat experienceList={benevolat} />}
           />
           <Route path="/game" element={<Game />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route
             path="*"
             element={<div className="text-2xl">Page not found</div>}

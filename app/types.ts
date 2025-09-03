@@ -118,3 +118,12 @@ export enum CompetenceType {
   AiIot = "ai-iot",
   Langue = "langue",
 }
+
+export enum GalleryEnum {
+  CRTP = "CRTP",
+  LAST_SESSION = "Stage",
+  ALIVE_CULTURE = "ALIVEculture",
+  ALIVE_CODE = "ALIVEcode",
+  AUTRES = "Autres",
+  LEANE = "Leane",
+}

@@ -1,7 +1,7 @@
 import type { ExperienceDetailsProps } from "~/types";
 import { getCompetencesByArray, isMobile } from "~/utils";
 import CompetencesCard from "./competences-card";
-import leftArrowImg from "~/assets/images/arrowleft.png";
+import { BackArrow } from "./back-arrow";
 
 export default function ExperienceDetails({
   experience: exp,
@@ -9,12 +9,7 @@ export default function ExperienceDetails({
 }: ExperienceDetailsProps) {
   return (
     <div className="flex flex-col md:flex-row text-xl justify-evenly w-full h-full relative">
-      <button
-        className="absolute -top-4 left-4 size-12 flex-none text-3xl cursor-pointer"
-        onClick={onArrowClick}
-      >
-        <img className="animate-pulse rotate-30" src={leftArrowImg} alt="Go back img" />
-      </button>
+      <BackArrow onClick={onArrowClick} />
       <div className="flex flex-col items-center flex-1 md:border-r">
         <h2 className="flex-1 text-3xl font-bold">{exp.title}</h2>
         <p className="text-gray-700">
